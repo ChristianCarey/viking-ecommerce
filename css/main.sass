@@ -1,0 +1,172 @@
+//imports
+@import normalize
+
+//variables
+$gray: #333333
+$blue: #8187AC
+$light-gold: #d3c092
+$dark-gold: #6A582B
+
+//extends
+.flex
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+.flex-wrap
+  -webkit-flex-wrap: wrap
+  flex-wrap: wrap
+
+.flex-center
+  -webkit-align-items: center
+  align-items: center
+  -webkit-justify-content: space-between
+  justify-content: space-between
+
+//global styles
+
+html, body 
+  height: 100%
+  color: $gray
+
+body
+  font-family: 'Droid Serif', serif
+  background: $light-gold
+  padding: 0
+  margin: 0
+
+h1, h2, h3, ul
+  margin: 0
+  padding: 0
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+//specific styles
+
+.navbar 
+  $navbar-height: 50px
+  height: $navbar-height
+  padding: 0 80px 
+  line-height: $navbar-height
+  border-bottom: 2px solid $gray
+
+  .brand
+    display: inline-block
+
+  .navigation-links-container
+    display: inline-block
+    float: right
+
+  img 
+    display: inline-block
+    width: 30px
+    vertical-align: middle
+
+.main-content-container
+  text-align: center
+
+.main-image-container
+  max-width: 100%
+  height: 500px
+  background-image: url("../images/viking-ship.jpg")
+  background-size: 100%
+  background-repeat: no-repeat
+  background-position: center
+  text-align: center
+
+  h1 
+    line-height: 500px
+    color: #8187AC
+    font-size: 120px
+    -webkit-text-stroke: 2px $dark-gold
+    text-shadow: 4px 4px 4px $gray
+
+.big-subtitle
+  $big-subtitle-height: 100px
+  height: $big-subtitle-height
+  line-height: $big-subtitle-height
+  background: $blue
+
+.small-subtitle
+  $small-subtitle-height: 60px
+  height: $small-subtitle-height
+  line-height: $small-subtitle-height
+  background: $dark-gold
+  color: white
+
+.item-list-container
+  width: 80%
+  margin: 0 auto
+  padding: 50px 0 
+
+  .item-list 
+    @extend .flex
+    @extend .flex-wrap
+    @extend .flex-center
+
+  .item
+    $item-width: 32%
+    display: inline-block
+    width: $item-width
+    border: 1px solid $dark-gold
+    margin-bottom: 15px
+
+    .item-image-container
+      position: relative
+      height: 100%
+
+    .item-image
+      width: 100%
+
+    .item-title 
+      background: $gray
+      color: white
+      padding: 10px
+
+    .item-price
+      background: $light-gold
+      padding: 10px
+      color: $gray
+      position: absolute
+      top: 0
+      right: 0
+
+    .add-to-cart-container
+      background: $gray
+      padding: 20px
+      margin-top: -4px
+
+      .button
+        width: 40%
+        margin: 0 auto
+        background: $dark-gold
+        padding: 10px
+        color: white
+        box-shadow: 0px 0px 8px $light-gold
+
+.pagination-container
+  margin-top: -15px
+  margin-bottom: 35px
+
+.footer
+  background: $gray
+  padding: 25px
+  color: $light-gold
+
+  .contact-info
+    margin: 0 auto
+    width: 250px
+    text-align: center
+
+    p
+      color: white
+      text-align: left
+
+    img 
+      width: 22px
+
